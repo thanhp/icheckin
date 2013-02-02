@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Icheckin View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="icheckinViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBb-IG-CSO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login Facebook">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="perfomLogin:" destination="2" eventType="touchUpInside" id="xlq-gy-TNO"/>
+                                    <segue destination="awS-Ge-drt" kind="modal" id="Wt1-H0-1gq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-AD-jyh">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iVr-AD-jyh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="94" id="657-Rt-lOU"/>
+                            <constraint firstItem="WBb-IG-CSO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="175" id="AYM-SM-lq3"/>
+                            <constraint firstAttribute="bottom" secondItem="iVr-AD-jyh" secondAttribute="bottom" constant="145" id="H4z-P6-90M"/>
+                            <constraint firstItem="WBb-IG-CSO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="113" id="WzO-wW-KGc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="3" id="hlk-Om-vyS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="ueg-hf-jyr">
+            <objects>
+                <viewController id="awS-Ge-drt" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NPx-bM-dQF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKh-Sb-i4i">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sro-1m-6KM" customClass="FBProfilePictureView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmx-SD-d5W">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="check-in">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="g17-xY-7Ir" kind="modal" id="uvY-rT-rUq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sro-1m-6KM" secondAttribute="trailing" constant="233" id="12s-XO-i57"/>
+                            <constraint firstItem="Sro-1m-6KM" firstAttribute="leading" secondItem="NPx-bM-dQF" secondAttribute="leading" constant="6" id="8ES-bH-EFe"/>
+                            <constraint firstItem="aKh-Sb-i4i" firstAttribute="top" secondItem="NPx-bM-dQF" secondAttribute="top" constant="35" id="BvN-uW-8Uw"/>
+                            <constraint firstItem="Sro-1m-6KM" firstAttribute="top" secondItem="NPx-bM-dQF" secondAttribute="top" constant="6" id="JLN-0h-KB1"/>
+                            <constraint firstAttribute="trailing" secondItem="Wmx-SD-d5W" secondAttribute="trailing" constant="45" id="RRM-GZ-FJP"/>
+                            <constraint firstItem="aKh-Sb-i4i" firstAttribute="centerY" secondItem="Sro-1m-6KM" secondAttribute="centerY" type="default" id="nJY-I3-BnO"/>
+                            <constraint firstItem="Wmx-SD-d5W" firstAttribute="top" secondItem="NPx-bM-dQF" secondAttribute="top" constant="212" id="u1D-i0-7ib"/>
+                            <constraint firstAttribute="trailing" secondItem="aKh-Sb-i4i" secondAttribute="trailing" constant="69" id="vd9-Vr-aIh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameLabel" destination="aKh-Sb-i4i" id="uTa-eR-CfW"/>
+                        <outlet property="userProfileImage" destination="Sro-1m-6KM" id="Xuc-sW-k0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjF-V6-5gR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="-180"/>
+        </scene>
+        <!--Place Check In View Controller-->
+        <scene sceneID="7Ec-7U-zwh">
+            <objects>
+                <viewController id="g17-xY-7Ir" customClass="PlaceCheckInViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="55g-H2-jX3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hLO-7G-Rsd">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="eRy-j5-u16"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hLO-7G-Rsd" firstAttribute="leading" secondItem="55g-H2-jX3" secondAttribute="leading" type="default" id="7qW-Sj-S4S"/>
+                            <constraint firstItem="hLO-7G-Rsd" firstAttribute="bottom" secondItem="55g-H2-jX3" secondAttribute="bottom" type="default" id="L3n-a2-8qt"/>
+                            <constraint firstItem="hLO-7G-Rsd" firstAttribute="trailing" secondItem="55g-H2-jX3" secondAttribute="trailing" type="default" id="f0b-eh-ptU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nearByPlaceView" destination="hLO-7G-Rsd" id="fvI-gT-Z4R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eC4-Bw-WSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="-444"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FBProfilePictureView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBProfilePictureView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlaceCheckInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlaceCheckInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nearByPlaceView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ProfileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="userNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="userProfileImage" candidateClass="FBProfilePictureView"/>
+            </relationships>
+        </class>
+        <class className="icheckinViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/icheckinViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="logoutButtonWasPressed:"/>
+                <relationship kind="action" name="perfomLogin:"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
